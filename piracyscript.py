@@ -17,12 +17,18 @@ while True:
     # -246, 656
     # -138, 681
 
-    x=-214
-    y=651
+    x=-191
+    y=720
 
-    pyautogui.click(x,y)
-    print(f"Clicked at position X: {x} Y: {y}")
+    # Start clicking with a random interval
+    start_time=time.time()
+    wait_time=random.randint(1,2)
 
-    # Wait for 170 to 180 seconds before starting
-    wait_time=random.randint(165, 175)
-    time.sleep(wait_time)
+    while time.time()-start_time<10:
+        pyautogui.click(x,y)
+        print(f"Clicked at position X: {x} Y: {y}")
+        time.sleep(1)
+        time.sleep(wait_time)
+
+    # Wait for 450 seconds before starting again
+    time.sleep(450)
