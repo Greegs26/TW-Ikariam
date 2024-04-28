@@ -24,11 +24,11 @@ while True:
     start_time=time.time()
     wait_time=random.randint(1,2)
 
-    while time.time()-start_time<10:
+    while time.time()-start_time<8:
         pyautogui.click(x,y)
         print(f"Clicked at position X: {x} Y: {y}")
         time.sleep(1)
         time.sleep(wait_time)
 
-    # Wait for 450 seconds before starting again
-    time.sleep(450)
+    # Wait for 150 seconds before starting again
+    time.sleep(150)
