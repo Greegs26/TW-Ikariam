@@ -31,4 +31,5 @@ while True:
         time.sleep(wait_time)
 
     # Wait for 150 seconds before starting again
+    print("Begin waiting time of 2m30sec")
     time.sleep(150)
