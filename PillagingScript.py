@@ -25,5 +25,5 @@ while True:
     #time.sleep(2)
 
     # Wait for 150 seconds before starting again
-    print("Begin waiting time of 2m30sec")
-    time.sleep(150)
+    print("Begin Pillage")
+    time.sleep(9600)
