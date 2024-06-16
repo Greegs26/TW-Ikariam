@@ -49,7 +49,7 @@ while True:
     pyautogui.click(-85, 251)
     time.sleep(2)
     # Wait for 150 seconds before starting again
-    print("Begin Pillage")
-    time.sleep(9600)
+    print("Begin Pillage - wait time of 1h50mins")
+    time.sleep(6600)
 
     index = (index+1) % len(coords)
