@@ -10,12 +10,6 @@ coords=[(-606, 331), (-1009, 283), (-1158, 362), (-1276, 421), (-1465, 512), (-1
 time.sleep(5)
 
 while True: 
-
-    # Get the current mouse cursor's X and Y positions
-    x, y = pyautogui.position()
-
-    # Print the coordinates
-    print(f"The current mouse position is X: {x} Y: {y}")
     #The current mouse position is X: -606 Y: 331
     #The current mouse position is X: -1009 Y: 283
     #The current mouse position is X: -1158 Y: 362
@@ -23,9 +17,14 @@ while True:
     #The current mouse position is X: -1465 Y: 512
     #The current mouse position is X: -1506 Y: 708
     #The current mouse position is X: -1191 Y: 726
+    #This is used to click on actual city
+    coord = coords[index]
+    pyautogui.click(coord[0], coord[1])
     time.sleep(2)
-
+    #used to click on pillage button
     pyautogui.click(-616, 724)
+
+
     time.sleep(2)
     pyautogui.click(-1692, 535)
     time.sleep(2)
@@ -52,3 +51,5 @@ while True:
     # Wait for 150 seconds before starting again
     print("Begin Pillage")
     time.sleep(9600)
+
+    index = (index+1) % len(coords)
