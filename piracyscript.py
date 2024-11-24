@@ -10,15 +10,15 @@ time.sleep(5)
 while True: 
 
     # Get the current mouse cursor's X and Y positions
-    x, y = pyautogui.position()
+    #x, y = pyautogui.position()
 
     # Print the coordinates
-    print(f"The current mouse position is X: {x} Y: {y}")
+    #print(f"The current mouse position is X: {x} Y: {y}")
     # -246, 656
     # -138, 681
 
-    #x=-191
-    #y=720
+    x=1729
+    y=708
 
     # Start clicking with a random interval
     start_time=time.time()
@@ -30,6 +30,6 @@ while True:
         time.sleep(1)
         time.sleep(wait_time)
 
-    # Wait for 150 seconds before starting again
-    print("Begin waiting time of 2m30sec")
-    time.sleep(150)
+    # Wait for 450 seconds before starting again
+    print("Begin waiting time of 7m30sec")
+    time.sleep(450)
