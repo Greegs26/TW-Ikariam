@@ -28,3 +28,4 @@ while True:
 
     #X: -616 Y: 724
     time.sleep(2)
+

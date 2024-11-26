@@ -1,4 +1,4 @@
-#Creating Mechquest bot using pythong
+#Creating Mechquest bot using python
 import pyautogui
 import time
 import random
@@ -17,25 +17,21 @@ while True:
     # battle start
     
     # find the spider
-    pyautogui.click(3561, 756)
+    pyautogui.click(1372, 631)
     time.sleep(8)
 
     # battle start
-    pyautogui.click(2886, 500)
+    pyautogui.click(930, 467)
     time.sleep(9)
-    pyautogui.click(2886, 554)
+    pyautogui.click(930, 637)
     time.sleep(9)
-    pyautogui.click(2886, 600)
+    pyautogui.click(930, 502)
     time.sleep(9)
-    pyautogui.click(2886, 649)
-    time.sleep(9)
-    pyautogui.click(2886, 698)
-    time.sleep(9)
-    pyautogui.click(2886, 756)
-    time.sleep(9)
+    pyautogui.click(930, 467)
+    time.sleep(9)    
 
     # End the battle
-    pyautogui.click(3018, 663)
+    pyautogui.click(1021, 574)
     time.sleep(3)
-    pyautogui.click(2887, 755)
+    pyautogui.click(941, 636)
     time.sleep(3)
