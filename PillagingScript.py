@@ -17,7 +17,7 @@ import sys
 #The current mouse position is X: -271 Y: 599
 #The current mouse position is X: -386 Y: 540
 #The current mouse position is X: -284 Y: 543
-coords=[(-321, 460), (-543, 433), (-625, 483), (-686, 515), (-794, 563), (-816, 672), (-641, 682), (-360, 691), (-269, 668), (-271, 599), (-386, 540), (-284, 543)]
+coords=[(5042, 473), (4939, 557), (4978, 613), (5013, 662), (5004, 750), (5141, 730), (5533, 561), (5441, 484), (5343, 458), (5242, 419)]
 index=0
 
 # Wait for 5 seconds to set up proper browser tab before starting
@@ -31,36 +31,36 @@ while True:
     time.sleep(2)
 
     #used to click on pillage button
-    pyautogui.click(-1691, 532)
+    pyautogui.click(4072, 501)
     time.sleep(2)
     #used to click on spearmen
-    pyautogui.click(-500, 566)
-    time.sleep(2)
+   # pyautogui.click(-500, 566)
+   # time.sleep(2)
     #Selecting spearmen, Type the number 7
-    pyautogui.write('7', interval=0.1)
-    time.sleep(2)
+   # pyautogui.write('7', interval=0.1)
+   # time.sleep(2)
     #Sending max mortars
-    pyautogui.click(-649, 701)
-    time.sleep(2)
+   # pyautogui.click(-649, 701)
+   # time.sleep(2)
     #Selecting boats
-    pyautogui.click(-1009, 783)
-    time.sleep(2)
+   # pyautogui.click(-1009, 783)
+   # time.sleep(2)
     #Selecting boats, Type the number 5000
-    pyautogui.write('5000', interval=0.1)
-    time.sleep(2)
+   # pyautogui.write('5000', interval=0.1)
+   # time.sleep(2)
     #Send pillage
-    pyautogui.click(-524, 783)
-    time.sleep(2)
+   # pyautogui.click(-524, 783)
+   # time.sleep(2)
     #Select Military Advisor
-    pyautogui.click(-256, 159)
-    time.sleep(2)
+   # pyautogui.click(-256, 159)
+   # time.sleep(2)
     #Exit Military Advisor
-    pyautogui.click(-448,242)
-    time.sleep(2)
+   # pyautogui.click(-448,242)
+   # time.sleep(2)
 
 
     # Wait for 150 seconds before starting again
-    print("Begin Pillage - wait time of 1h50mins")
-    time.sleep(5700)
+    #print("Begin Pillage - wait time of 60mins")
+    #time.sleep(3600)
 
     index = (index+1) % len(coords)

@@ -15,6 +15,9 @@ def attack():
     time.sleep(3)
     pyautogui.click(4937, 671)
     time.sleep(3)
+    # collect level up
+    #pyautogui.click(4797, 785)
+    #time.sleep(2)
 
 def right_side():
     # click right side of screen
