@@ -17,8 +17,9 @@ import sys
 #The current mouse position is X: -271 Y: 599
 #The current mouse position is X: -386 Y: 540
 #The current mouse position is X: -284 Y: 543
-coords=[(5042, 473), (4939, 557), (4978, 613), (5013, 662), (5004, 750), (5141, 730), (5151, 624), (5533, 561), (5441, 484), (5343, 458), (5242, 419), (5111, 430)]
-index=8
+## coords=[(5042, 473), (4939, 557), (4978, 613), (5013, 662), (5004, 750), (5141, 730), (5151, 624), (5533, 561), (5441, 484), (5343, 458), (5242, 419), (5111, 430)] Coords for 97:7
+coords = [(4468, 388), (4534, 496), (4373, 610)] # Coords for 97:11
+index=0
 
 # Wait for 5 seconds to set up proper browser tab before starting
 time.sleep(5)
@@ -34,18 +35,18 @@ while True:
     pyautogui.click(4072, 501)
     time.sleep(2)
     #used to click on spearmen
-    pyautogui.click(5624, 526)
+    pyautogui.click(5619, 432)
     time.sleep(2)
     #Selecting spearmen, Type the number 7
     pyautogui.write('7', interval=0.1)
     time.sleep(2)
     #Sending max mortars
-    pyautogui.click(5631, 758)
+    pyautogui.click(5622, 7482)
     time.sleep(2)
     pyautogui.write('500', interval=0.1)
     time.sleep(2)
     #Selecting boats
-    pyautogui.click(5119, 882)
+    pyautogui.click(5122, 559)
     time.sleep(2)
     #Selecting boats, Type the number 5000
     pyautogui.write('5000', interval=0.1)
@@ -54,7 +55,7 @@ while True:
     pyautogui.click(5598, 874)
     time.sleep(2)
     #Select Military Advisor
-    pyautogui.click(5508, 146)
+    pyautogui.click(5600, 553)
     time.sleep(2)
     #Exit Military Advisor
     pyautogui.click(4050,262)
