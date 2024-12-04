@@ -1,24 +1,10 @@
-#trying to create my own Piracy bot using PyAutoGUI
 import pyautogui
 import time
 import random
 import sys
 
-#The current mouse position is X: -321 Y: 460
-#The current mouse position is X: -543 Y: 433
-#The current mouse position is X: -625 Y: 483
-#The current mouse position is X: -686 Y: 515
-#The current mouse position is X: -794 Y: 563
-#The current mouse position is X: -816 Y: 672
-#The current mouse position is X: -641 Y: 682
-
-#The current mouse position is X: -360 Y: 691
-#The current mouse position is X: -269 Y: 668
-#The current mouse position is X: -271 Y: 599
-#The current mouse position is X: -386 Y: 540
-#The current mouse position is X: -284 Y: 543
-## coords=[(5042, 473), (4939, 557), (4978, 613), (5013, 662), (5004, 750), (5141, 730), (5151, 624), (5533, 561), (5441, 484), (5343, 458), (5242, 419), (5111, 430)] Coords for 97:7
-coords = [(4468, 388), (4534, 496), (4373, 610)] # Coords for 97:11
+coords=[(5042, 473), (4939, 557), (4978, 613), (5013, 662), (5004, 750), (5141, 730), (5151, 624), (5533, 561), (5441, 484), (5343, 458), (5242, 419), (5111, 430)] ##Coords for 97:7
+## coords = [(4998, 460), (5033, 519), (4945, 584)] # Coords for 97:11
 index=0
 
 # Wait for 5 seconds to set up proper browser tab before starting
