@@ -3,9 +3,40 @@ import time
 import random
 import sys
 
-coords=[(5042, 473), (4939, 557), (4978, 613), (5013, 662), (5004, 750), (5141, 730), (5151, 624), (5533, 561), (5441, 484), (5343, 458), (5242, 419), (5111, 430)] ##Coords for 97:7
-## coords = [(4998, 460), (5033, 519), (4945, 584)] # Coords for 97:11
-index=0
+# Initialize an empty list to store coordinates
+coords = []
+
+# Function to capture mouse coordinates
+def capture_coordinates():
+    print("Move your mouse to the desired position and press 'Enter' to capture coordinates.")
+    print("Press 'q' and 'Enter' to finish capturing.")
+    while True:
+        input_key = input("Press 'Enter' to capture, or 'q' to quit: ")
+        if input_key.lower() == 'q':
+            print("Finished capturing coordinates.")
+            break
+        x, y = pyautogui.position()
+        coords.append((x, y))
+        print(f"Captured: {x}, {y}")
+
+# Prompt to capture coordinates or use predefined ones
+choice = input("Would you like to capture new coordinates? (y/n): ").strip().lower()
+if choice == 'y':
+    capture_coordinates()
+else:
+    # Default hardcoded coordinates
+    coords = [
+        (5042, 473), (4939, 557), (4978, 613), (5013, 662), 
+        (5004, 750), (5141, 730), (5151, 624), (5533, 561), 
+        (5441, 484), (5343, 458), (5242, 419), (5111, 430)
+    ]
+
+# Confirm the coordinates to be used
+print(f"Using the following coordinates: {coords}")
+
+# Index for cycling through coordinates
+index = 0
+
 
 # Wait for 5 seconds to set up proper browser tab before starting
 time.sleep(5)
