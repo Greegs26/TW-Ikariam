@@ -7,29 +7,39 @@ import sys
 # Wait for 5 seconds to set up proper browser tab before starting
 time.sleep(5)
 
+# Initialize an empty list to store coordinates
+coords = []
+
+# Function to capture mouse coordinates
+def capture_coordinates():
+    print("Move your mouse to the desired position and press 'Enter' to capture coordinates.")
+    print("Press 'q' and 'Enter' to finish capturing.")
+    while True:
+        input_key = input("Press 'Enter' to capture, or 'q' to quit: ")
+        if input_key.lower() == 'q':
+            print("Finished capturing coordinates.")
+            break
+        x, y = pyautogui.position()
+        coords.append((x, y))
+        print(f"Captured: {x}, {y}")
+
+# Prompt to capture coordinates or use predefined ones
+capture_coordinates()
+
+# Confirm the coordinates to be used
+print(f"Using the following coordinates: {coords}")
+
+# Wait for 5 seconds to set up proper browser tab before starting
+time.sleep(5)
+
 while True: 
 
-    # Get the current mouse cursor's X and Y positions
-    #x, y = pyautogui.position()
+    #This is used to click on actual city
+    coord = coords[0]
+    pyautogui.click(coord[0], coord[1])
+    time.sleep(2)
 
-    # Print the coordinates
-    #print(f"The current mouse position is X: {x} Y: {y}")
-    # -246, 656
-    # -138, 681
-
-    x=1729
-    y=708
-
-    # Start clicking with a random interval
-    start_time=time.time()
-    wait_time=random.randint(1,2)
-
-    while time.time()-start_time<8:
-        pyautogui.click(x,y)
-        print(f"Clicked at position X: {x} Y: {y}")
-        time.sleep(1)
-        time.sleep(wait_time)
-
-    # Wait for 450 seconds before starting again
-    print("Begin waiting time of 7m30sec")
-    time.sleep(450)
+    # Wait for 150 seconds before starting again
+    print("Begin waiting time of 2m30sec")
+    sleep_time = random.randint(152, 162)
+    time.sleep(sleep_time)

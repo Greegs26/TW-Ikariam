@@ -35,7 +35,7 @@ else:
 print(f"Using the following coordinates: {coords}")
 
 # Index for cycling through coordinates
-index = 0
+index = 8
 
 
 # Wait for 5 seconds to set up proper browser tab before starting
@@ -49,33 +49,33 @@ while True:
     time.sleep(2)
 
     #used to click on pillage button
-    pyautogui.click(4072, 501)
+    pyautogui.click(2161, 769)
     time.sleep(2)
     #used to click on spearmen
-    pyautogui.click(5619, 432)
+    pyautogui.click(3718, 794)
     time.sleep(2)
     #Selecting spearmen, Type the number 7
     pyautogui.write('7', interval=0.1)
     time.sleep(2)
     #Sending max mortars
-    pyautogui.click(5622, 7482)
+    pyautogui.click(3709, 1027)
     time.sleep(2)
     pyautogui.write('500', interval=0.1)
     time.sleep(2)
     #Selecting boats
-    pyautogui.click(5122, 559)
+    pyautogui.click(3191, 1147)
     time.sleep(2)
     #Selecting boats, Type the number 5000
     pyautogui.write('5000', interval=0.1)
     time.sleep(2)
     #Send pillage
-    pyautogui.click(5598, 874)
+    pyautogui.click(3674, 1151)
     time.sleep(2)
     #Select Military Advisor
-    pyautogui.click(5600, 553)
+    pyautogui.click(3585, 421)
     time.sleep(2)
     #Exit Military Advisor
-    pyautogui.click(4050,262)
+    pyautogui.click(2131, 526)
     time.sleep(2)
 
 
