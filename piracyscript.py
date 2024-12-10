@@ -4,8 +4,8 @@ import time
 import random
 import sys
 
-# Wait for 5 seconds to set up proper browser tab before starting
-time.sleep(5)
+# Wait for 1 seconds to set up proper browser tab before starting
+time.sleep(1)
 
 # Initialize an empty list to store coordinates
 coords = []
