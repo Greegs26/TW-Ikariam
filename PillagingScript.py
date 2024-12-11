@@ -53,26 +53,26 @@ while True:
     time.sleep(2)
 
     #Sending max mortars
-    pyautogui.click(3546, 799)
+    pyautogui.click(3546, 862)
     time.sleep(2)
     #pyautogui.write('500', interval=0.1)
     #time.sleep(2)
 
     #used to click on spearmen
-    pyautogui.click(3709, 752)
+    pyautogui.click(3709, 819)
     time.sleep(2)
     #Selecting spearmen, Type the number 7
     pyautogui.write('7', interval=0.1)
     time.sleep(2)
   
     #Selecting boats
-    pyautogui.click(3198, 872)
+    pyautogui.click(3198, 945)
     time.sleep(2)
     #Selecting boats, Type the number 5000
     pyautogui.write('5000', interval=0.1)
     time.sleep(2)
     #Send pillage
-    pyautogui.click(3680, 876)
+    pyautogui.click(3680, 930)
     time.sleep(2)
     #Select Military Advisor
     pyautogui.click(3583, 425)
