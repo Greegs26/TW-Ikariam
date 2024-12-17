@@ -34,6 +34,25 @@ else:
 # Confirm the coordinates to be used
 print(f"Using the following coordinates: {coords}")
 
+# Function to find and click an item on the screen
+#def find_and_click(image_path):
+#    try:
+#        # Search for the image on the screen
+#        location = pyautogui.locateOnScreen(image_path, confidence=0.8)  # Set confidence if necessary
+#
+#        if location:
+#            # Get the center of the found image and click it
+#            center = pyautogui.center(location)
+#            pyautogui.click(center)
+#            print(f"Clicked on {image_path} at {center}")
+#        else:
+#            print(f"{image_path} not found on the screen")
+#    except Exception as e:
+#        print(f"Error: {e}")
+
+# Path to the image you want to click (replace with your actual file path)
+#image_path = 'C:\Users\grega\OneDrive\Documents\GitHub\TW-Ikariam\ButtonShips.png'
+
 # Index for cycling through coordinates
 index = 0
 
@@ -49,41 +68,43 @@ while True:
     time.sleep(2)
 
     #used to click on pillage button
-    pyautogui.click(2149, 767)
+    pyautogui.click(2149, 769)
     time.sleep(2)
 
     #Sending max mortars
-    pyautogui.click(3546, 862)
+    pyautogui.click(3554, 861)
     time.sleep(2)
     #pyautogui.write('500', interval=0.1)
     #time.sleep(2)
 
     #used to click on spearmen
-    pyautogui.click(3709, 819)
+    pyautogui.click(3709, 816)
     time.sleep(2)
     #Selecting spearmen, Type the number 7
     pyautogui.write('7', interval=0.1)
     time.sleep(2)
   
     #Selecting boats
-    pyautogui.click(3198, 945)
+    pyautogui.click(3198, 938)
     time.sleep(2)
     #Selecting boats, Type the number 5000
     pyautogui.write('5000', interval=0.1)
     time.sleep(2)
     #Send pillage
-    pyautogui.click(3680, 930)
+    pyautogui.click(3680, 940)
     time.sleep(2)
     #Select Military Advisor
     pyautogui.click(3583, 425)
     time.sleep(2)
     #Exit Military Advisor
-    pyautogui.click(2137, 533)
+    pyautogui.click(2137, 525)
     time.sleep(2)
 
 
     # Wait for 150 seconds before starting again
     print("Begin Pillage - wait time of 60mins")
     time.sleep(3600)
+    # Function to find and click an item on the screen
+
 
     index = (index+1) % len(coords)

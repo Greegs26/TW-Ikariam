@@ -40,6 +40,6 @@ while True:
     time.sleep(2)
 
     # Wait for 150 seconds before starting again
-    print("Begin waiting time of 2m30sec")
-    sleep_time = random.randint(152, 162)
+    print("Begin waiting time of 7m30sec")
+    sleep_time = random.randint(452, 462)
     time.sleep(sleep_time)
