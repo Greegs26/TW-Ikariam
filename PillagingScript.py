@@ -72,26 +72,26 @@ while True:
     time.sleep(2)
 
     #Sending max mortars
-    pyautogui.click(3554, 861)
+    pyautogui.click(3549, 1044)
     time.sleep(2)
     #pyautogui.write('500', interval=0.1)
     #time.sleep(2)
 
     #used to click on spearmen
-    pyautogui.click(3709, 816)
+    pyautogui.click(3698, 821)
     time.sleep(2)
     #Selecting spearmen, Type the number 7
     pyautogui.write('7', interval=0.1)
     time.sleep(2)
   
     #Selecting boats
-    pyautogui.click(3198, 938)
+    pyautogui.click(3199, 1173)
     time.sleep(2)
     #Selecting boats, Type the number 5000
     pyautogui.write('5000', interval=0.1)
     time.sleep(2)
     #Send pillage
-    pyautogui.click(3680, 940)
+    pyautogui.click(3670, 1174)
     time.sleep(2)
     #Select Military Advisor
     pyautogui.click(3583, 425)
@@ -103,7 +103,7 @@ while True:
 
     # Wait for 150 seconds before starting again
     print("Begin Pillage - wait time of 60mins")
-    time.sleep(3600)
+    time.sleep(10680)
     # Function to find and click an item on the screen
 
 
