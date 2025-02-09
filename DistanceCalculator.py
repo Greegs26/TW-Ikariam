@@ -13,5 +13,4 @@ def main():
     travel_time = calculate_travel_time(x1, y1, x2, y2)
     print("Travel time is "+str(travel_time))
 
-if __name__ == "__main__":
-    main()
+main() # Call main() directly
