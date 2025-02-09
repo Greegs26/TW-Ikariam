@@ -26,20 +26,23 @@ def capture_coordinates():
 # Prompt to capture coordinates or use predefined ones
 capture_coordinates()
 
+
+
 # Confirm the coordinates to be used
 print(f"Using the following coordinates: {coords}")
 
 # Wait for 5 seconds to set up proper browser tab before starting
 time.sleep(5)
 
-while True: 
+while True:
+    index=0
+    while index<3:
+        #This is used to click on actual city
+        coord = coords[index]
+        pyautogui.click(coord[0], coord[1])
+        time.sleep(2)
+        index = (index+1)
 
-    #This is used to click on actual city
-    coord = coords[0]
-    pyautogui.click(coord[0], coord[1])
-    time.sleep(2)
+    print("Begin waiting period of 2m30sec")
+    time.sleep(160)
 
-    # Wait for 150 seconds before starting again
-    print("Begin waiting time of 7m30sec")
-    sleep_time = random.randint(152, 158)
-    time.sleep(sleep_time)
