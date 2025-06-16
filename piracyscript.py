@@ -35,14 +35,10 @@ print(f"Using the following coordinates: {coords}")
 time.sleep(5)
 
 while True:
-    index=0
-    while index<3:
-        #This is used to click on actual city
-        coord = coords[index]
+    for coord in coords:
         pyautogui.click(coord[0], coord[1])
         time.sleep(2)
-        index = (index+1)
 
-    print("Begin waiting period of 2m30sec")
-    time.sleep(160)
+    print("Begin waiting period of 7m30s")
+    time.sleep(470)
 
