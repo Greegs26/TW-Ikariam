@@ -1,14 +1,14 @@
 import threading
 import importlib
 import time
-from run_bot_selenium import run_click_bot
+import run_bot_selenium
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 
-def run_command():
+def run_command(driver):
     print("Running Piracy script")
     importlib.reload(run_bot_selenium)
-    threading.Thread(target=run_bot.run_click_bot, daemon=True).start()
+    threading.Thread(target=run_bot_selenium.run_click_bot, args=(driver,), daemon=True).start()
 
 def dummy_action():
     print("This is another action")
@@ -31,6 +31,20 @@ def print_available_commands():
     for cmd in command_map:
         print(f" - {cmd}")
     print() # Extra line for spacing
+
+def wait_for_new_tab(driver, timeout=60)
+    # Waits for a new tab to open for the given driver and switches to is
+    original_tabs = driver.window_handles
+    try:
+        WebDriverWait(driver, timeout).until(
+            lambda d: len(d.window_handles) > len(original_tabs)
+        )
+        new_tab = list(set(driver.window_handles) - set(original_tabs))[0]
+        driver.switch_to.winder(new_tab)
+        print("Switched to new tab")
+    except TimeoutException:
+        print("No new tab opened whithin timeout")
+        return None
 
 def command_listener():
     global running
@@ -58,17 +72,7 @@ options.set_preference("dom.webnotifications.enabled", False)  # Disable popups
 # Start browser
 driver1 = webdriver.Firefox(options=options)  # , service=service if needed
 driver1.get("https://ikariam.org")
-
-# Store current number of tabs
-num_tabs_before = len(driver1.window_handles)
-
-# Wait until the number of tabs increases
-WebDriverWait(driver1, 10).until(
-    lambda d: len(d.window_handels) > num_tabs_before
-)
-# Switch to the new tab
-driver1.switch_to.window(driver1.window_handles[-1])
-print("Switched to new tab")
+wait_for_new_tab(driver1)
 
 print_available_commands() # Show command options here
 command_listener()
