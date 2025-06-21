@@ -15,7 +15,8 @@ def dummy_action():
 
 def quit_program():
     print("Quitting program...")
-    driver1.quit()
+    for d in drivers.values():
+        d.quit()
     global running
     running = False
 
@@ -33,7 +34,7 @@ def print_available_commands():
     print() # Extra line for spacing
 
 def wait_for_new_tab(driver, timeout=60):
-    # Waits for a new tab to open for the given driver and switches to is
+    # Waits for a new tab to open for the given driver and switches to it
     original_tabs = driver.window_handles
     try:
         WebDriverWait(driver, timeout).until(
@@ -79,23 +80,30 @@ from selenium.webdriver.firefox.options import Options
 # Setup Firefox options
 options = Options()
 options.set_preference("dom.webnotifications.enabled", False)  # Disable popups
+options.set_preference("dom.webdriver.enabled", False) # Hides navigator.webdriver
 
-# Start browser
-driver1 = webdriver.Firefox(options=options)  # , service=service if needed
-driver1.get("https://ikariam.org")
-wait_for_new_tab(driver1)
+# Ask user how many drivers to open
+try:
+    num_sessions = int(input("How many browser sessions would you like to open? (1 to 6): ").strip())
+    if not (1 <= num_sessions <= 6):
+        raise ValueError
+except ValueError:
+    print("Invalid input. Defaulting to 1 session.")
+    num_sessions = 1
 
-# Start browser
-driver2 = webdriver.Firefox(options=options)  # , service=service if needed
-driver2.get("https://ikariam.org")
-wait_for_new_tab(driver2)
-
+# Launch only the requested number of drivers
 drivers = {}
 
-for i in range(1, 7):
+for i in range(1, num_sessions + 1):
+    print(f"\nLaunching session {i}...")
     driver = webdriver.Firefox(options=options)
     driver.get("https://ikariam.org")
+    
+    print("Please select your account and wait for the new tab to open.")
+    wait_for_new_tab(driver)
+
     drivers[str(i)] = driver
+    print(f"Session {i} is ready.")
 
 print_available_commands() # Show command options here
 command_listener()
